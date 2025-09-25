@@ -184,7 +184,7 @@ for period_name, (start_date, end_date) in periods.items():
             'observations': len(period_data)
         }
         
-        print(f"\n📈 {period_name} CAPM Results:")
+        print(f"\n {period_name} CAPM Results:")
         print(f"   • Beta (β): {model.params['mrkt_premium']:.4f}")
         print(f"   • Jensen's Alpha (α): {model.params['Intercept']:.4f}")
         print(f"   • R-squared: {model.rsquared:.4f}")
@@ -392,7 +392,7 @@ if len(all_results) > 0:
     for name, results in significant_alphas:
         print(f"     - {name}: α = {results['alpha']:.4f} (p = {results['p_value_alpha']:.4f})")
     
-    print(f"\n📊 MODEL FIT ANALYSIS:")
+    print(f"\n MODEL FIT ANALYSIS:")
     r_squareds = [(name, results['r_squared']) for name, results in all_results.items()]
     max_r2_period = max(r_squareds, key=lambda x: x[1])
     min_r2_period = min(r_squareds, key=lambda x: x[1])
@@ -400,7 +400,7 @@ if len(all_results) > 0:
     print(f"   • Best Model Fit: {max_r2_period[0]} (R² = {max_r2_period[1]:.4f})")
     print(f"   • Worst Model Fit: {min_r2_period[0]} (R² = {min_r2_period[1]:.4f})")
     
-    print(f"\n💡 INTERPRETATION:")
+    print(f"\n INTERPRETATION:")
     print(f"   • Beta measures the stock's sensitivity to market movements")
     print(f"   • Alpha measures the stock's excess return relative to CAPM expectations")
     print(f"   • Positive Alpha: Stock outperformed CAPM expectations")
@@ -427,7 +427,7 @@ if len(all_results) > 0:
         color = period_colors[period_name]
         
         # Print individual regression table
-        print(f"\n📊 REGRESSION TABLE - {period_name.upper()}")
+        print(f"\n REGRESSION TABLE - {period_name.upper()}")
         print(f"Date Range: {data['DATE'].min().strftime('%Y-%m-%d')} to {data['DATE'].max().strftime('%Y-%m-%d')}")
         print(f"Observations: {results['observations']}")
         print(f"{'-'*60}")
@@ -512,7 +512,7 @@ if len(all_results) > 0:
         print(f"Date Range:         {data['DATE'].min().strftime('%Y-%m-%d')} to {data['DATE'].max().strftime('%Y-%m-%d')}")
         
         # Interpretation
-        print(f"\n💡 INTERPRETATION - {period_name.upper()}")
+        print(f"\n INTERPRETATION - {period_name.upper()}")
         print(f"{'='*50}")
         if results['beta'] > 1:
             print(f"• Beta > 1: Pfizer is MORE volatile than the market")
