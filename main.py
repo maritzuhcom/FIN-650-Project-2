@@ -156,7 +156,7 @@ for period_name, (start_date, end_date) in periods.items():
     period_data = analyze_period(period_name, start_date, end_date, rf, snp500, stock_df)
     
     if len(period_data) < 10:  # Skip if insufficient data
-        print(f"⚠️  Insufficient data for {period_name}. Skipping...")
+        print(f" Insufficient data for {period_name}. Skipping...")
         continue
     
     # =============================================================================
@@ -331,7 +331,7 @@ if len(all_results) > 0:
     
     # Save the plot
     plt.savefig('covid_crisis_analysis.png', dpi=300, bbox_inches='tight')
-    print("✅ COVID-19 crisis analysis visualizations created and saved as 'covid_crisis_analysis.png'")
+    print("COVID-19 crisis analysis visualizations created and saved as 'covid_crisis_analysis.png'")
     
     # Show the plot
     plt.show()
