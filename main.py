@@ -346,7 +346,7 @@ print("COVID-19 CRISIS PERIOD ANALYSIS SUMMARY")
 print("="*80)
 
 if len(all_results) > 0:
-    print(f"\n📊 PFE (Pfizer) Beta and Jensen's Alpha Analysis:")
+    print(f"\n PFE (Pfizer) Beta and Jensen's Alpha Analysis:")
     print(f"{'Period':<20} {'Beta (β)':<12} {'Alpha (α)':<12} {'R²':<8} {'Obs':<6} {'P-value (β)':<12}")
     print("-" * 80)
     
@@ -383,7 +383,7 @@ if len(all_results) > 0:
     significant_alphas = [(name, results) for name, results in all_results.items() 
                          if results['p_value_alpha'] < 0.05]
     
-    print(f"\n📈 STATISTICAL SIGNIFICANCE:")
+    print(f"\n STATISTICAL SIGNIFICANCE:")
     print(f"   • Periods with significant Beta (p < 0.05): {len(significant_betas)}")
     for name, results in significant_betas:
         print(f"     - {name}: β = {results['beta']:.4f} (p = {results['p_value_beta']:.4f})")
@@ -494,13 +494,13 @@ if len(all_results) > 0:
         # Save individual graph
         filename = f'{period_name.lower().replace(" ", "_")}_analysis.png'
         plt.savefig(filename, dpi=300, bbox_inches='tight')
-        print(f"✅ Individual analysis saved as '{filename}'")
+        print(f" Individual analysis saved as '{filename}'")
         
         # Show the plot
         plt.show()
         
         # Print summary statistics for this period
-        print(f"\n📈 SUMMARY STATISTICS - {period_name.upper()}")
+        print(f"\n SUMMARY STATISTICS - {period_name.upper()}")
         print(f"{'='*50}")
         print(f"Beta (β):           {results['beta']:.4f}")
         print(f"Jensen's Alpha (α): {results['alpha']:.4f}")
