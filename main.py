@@ -166,7 +166,7 @@ for period_name, (start_date, end_date) in periods.items():
     # CAPM equation: R_stock - R_f = α + β(R_market - R_f) + ε
     # Where: R_stock = stock return, R_f = risk-free rate, R_market = market return
     #        α = Jensen's Alpha (excess return), β = Beta (systematic risk)
-    print(f"\n📊 Running CAPM regression for {period_name}...")
+    print(f"\n Running CAPM regression for {period_name}...")
     try:
         # OLS regression with HAC (Heteroscedasticity and Autocorrelation Consistent) standard errors
         # This accounts for potential heteroscedasticity and autocorrelation in financial time series
