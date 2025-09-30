@@ -367,12 +367,12 @@ if len(all_results) > 0:
     max_alpha_period = max(alphas, key=lambda x: x[1])
     min_alpha_period = min(alphas, key=lambda x: x[1])
     
-    print(f"🔍 BETA ANALYSIS:")
+    print(f" BETA ANALYSIS:")
     print(f"   • Highest Beta: {max_beta_period[0]} (β = {max_beta_period[1]:.4f})")
     print(f"   • Lowest Beta:  {min_beta_period[0]} (β = {min_beta_period[1]:.4f})")
     print(f"   • Beta Range:   {max_beta_period[1] - min_beta_period[1]:.4f}")
     
-    print(f"\n🔍 JENSEN'S ALPHA ANALYSIS:")
+    print(f"\n JENSEN'S ALPHA ANALYSIS:")
     print(f"   • Highest Alpha: {max_alpha_period[0]} (α = {max_alpha_period[1]:.4f})")
     print(f"   • Lowest Alpha:  {min_alpha_period[0]} (α = {min_alpha_period[1]:.4f})")
     print(f"   • Alpha Range:   {max_alpha_period[1] - min_alpha_period[1]:.4f}")
@@ -540,7 +540,7 @@ if len(all_results) > 0:
         else:
             print(f"• Alpha is NOT statistically significant (p ≥ 0.05)")
     
-    print(f"\n📁 INDIVIDUAL FILES CREATED:")
+    print(f"\n INDIVIDUAL FILES CREATED:")
     for period_name in all_results.keys():
         filename = f'{period_name.lower().replace(" ", "_")}_analysis.png'
         print(f"   • {filename} - Complete analysis for {period_name}")
